@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="score">Show my score</string>
+    <string name="thank_you"> Thank you</string>
+    <string name="welcome">Why don\'t you come over?</string>
+    <string name="question1">The most famous Romanian is </string>
+    <string name="answer1">Nadia Comaneci</string>
+    <string name="question2">Which movies were shot in Romania?</string>
+    <string name="transporter">Transporter 3</string>
+    <string name="invisibleGuest">The Invisible Guest</string>
+    <string name="potter">Harry Potter</string>
+    <string name="whistleblower">The Whistleblower</string>
+    <string name="question3">Which of the following was named “the best road in the world” by Top Gear?</string>
+    <string name="transalpina">Transalpina</string>
+    <string name="transfagarasean">Transfagarasean</string>
+    <string name="route62">Route 62</string>
+    <string name="transiberian">Transsiberian</string>
+    <string name="question5">The first city lit by electric street lamps in continental Europe is: </string>
+    <string name="cluj">Cluj</string>
+    <string name="brasov">Brasov</string>
+    <string name="timisoara">Timisoara</string>
+    <string name="iasi">Iasi</string>
+    <string name="question4">What was invented in Romania?</string>
+    <string name="insulin">Insulin</string>
+    <string name="pen">Fountain pen</string>
+    <string name="sausage">Long sausages</string>
+    <string name="engine">Modern jet engine</string>
+    <string name="question6">Romania’s national currency is leu. What does it mean?</string>
+    <string name="answer6">Lion</string>
+</resources>
