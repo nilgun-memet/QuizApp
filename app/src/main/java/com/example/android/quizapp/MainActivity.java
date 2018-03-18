@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
      * @return
      */
     public void getScore(View view) {
-        int finalScore = 0;
+        int finalScore;
         int maxScore = 2 * (TEXT_ANSWER_SCORE + MULTIPLE_CHOICE_ANSWER_SCORE + SINGLE_CHOICE_ANSWER_SCORE);
         if (isAnswerOneCorrect()) {
             finalScore = finalScore + TEXT_ANSWER_SCORE;
