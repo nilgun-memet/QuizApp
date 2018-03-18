@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         option3Question4 = findViewById(R.id.checkbox_option3Q4);
         option4Question4 = findViewById(R.id.checkbox_option4Q4);
 
-
     }
 
     /**
@@ -88,15 +90,16 @@ public class MainActivity extends AppCompatActivity {
         if (isAnswerSixCorrect()) {
             finalScore = finalScore + TEXT_ANSWER_SCORE;
         }
-        if (finalScore == 0 ) {
+        if (finalScore == 0) {
             showPopUp("You didn't get any correct answer.");
         } else {
-        if (finalScore == maxScore) {
-            showPopUp("Congratulations! You answered correctly to all questions.");
-        } else {
-            showPopUp("Your score is " + finalScore);
+            if (finalScore == maxScore) {
+                showPopUp("Congratulations! You answered correctly to all questions.");
+            } else {
+                showPopUp("Your score is " + finalScore);
+            }
         }
-    }}
+    }
 
     /*
 ** Creates the Pop up message to show a dialog

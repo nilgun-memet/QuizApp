@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">QuizApp</string>
     <string name="score">Show my score</string>
     <string name="thank_you"> Thank you</string>
     <string name="welcome">Why don\'t you come over?</string>
@@ -25,6 +24,6 @@
     <string name="pen">Fountain pen</string>
     <string name="sausage">Long sausages</string>
     <string name="engine">Modern jet engine</string>
-    <string name="question6">Romania’s national currency is leu. What does it mean?</string>
+    <string name="question6">The currency of Romania is leu. What does it mean?</string>
     <string name="answer6">Lion</string>
 </resources>
