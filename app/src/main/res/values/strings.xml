@@ -26,4 +26,7 @@
     <string name="engine">Modern jet engine</string>
     <string name="question6">The currency of Romania is leu. What does it mean?</string>
     <string name="answer6">Lion</string>
+    <string name="message_max_score">Congratulations! You answered correctly to all questions.</string>
+    <string name="message_min_score">You didn\'t get any correct answer</string>
+    <string name="message_your_final_score">Your final score is: %d</string>
 </resources>

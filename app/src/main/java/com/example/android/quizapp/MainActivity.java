@@ -1,25 +1,16 @@
 package com.example.android.quizapp;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.quizapp.R;
-
 public class MainActivity extends AppCompatActivity {
-
     /**
      * Initializes constants throughout the app
      *
@@ -28,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int TEXT_ANSWER_SCORE = 3;
     private static final int SINGLE_CHOICE_ANSWER_SCORE = 1;
     private static final int MULTIPLE_CHOICE_ANSWER_SCORE = 2;
-
+    private static final int FINAL_SCORE_INITIAL = 0;
+    private static final int QUESTION_NUMBERS = 2;
     private EditText textInputQuestionOneET;
     private EditText textInputQuestionTwoET;
     private RadioButton correctButtonQ3;
@@ -42,12 +34,10 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox option3Question4;
     private CheckBox option4Question4;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         textInputQuestionOneET = findViewById(R.id.nadia);
         textInputQuestionTwoET = findViewById(R.id.name_field);
         correctButtonQ3 = findViewById(R.id.answer3_radio_button);
@@ -60,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         option2Question4 = findViewById(R.id.checkbox_option2Q4);
         option3Question4 = findViewById(R.id.checkbox_option3Q4);
         option4Question4 = findViewById(R.id.checkbox_option4Q4);
-
     }
 
     /**
@@ -69,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
      * @return
      */
     public void getScore(View view) {
-        int finalScore;
-        int maxScore = 2 * (TEXT_ANSWER_SCORE + MULTIPLE_CHOICE_ANSWER_SCORE + SINGLE_CHOICE_ANSWER_SCORE);
+        int finalScore = FINAL_SCORE_INITIAL;
+        int maxScore = QUESTION_NUMBERS * (TEXT_ANSWER_SCORE + MULTIPLE_CHOICE_ANSWER_SCORE + SINGLE_CHOICE_ANSWER_SCORE);
         if (isAnswerOneCorrect()) {
             finalScore = finalScore + TEXT_ANSWER_SCORE;
         }
@@ -91,30 +80,14 @@ public class MainActivity extends AppCompatActivity {
             finalScore = finalScore + TEXT_ANSWER_SCORE;
         }
         if (finalScore == 0) {
-            showPopUp("You didn't get any correct answer.");
+            Toast.makeText(this, R.string.message_min_score, Toast.LENGTH_SHORT).show();
         } else {
             if (finalScore == maxScore) {
-                showPopUp("Congratulations! You answered correctly to all questions.");
+                Toast.makeText(this, R.string.message_max_score, Toast.LENGTH_SHORT).show();
             } else {
-                showPopUp("Your score is " + finalScore);
+                Toast.makeText(this, getString(R.string.message_your_final_score, finalScore), Toast.LENGTH_SHORT).show();
             }
         }
-    }
-
-    /*
-** Creates the Pop up message to show a dialog
- */
-    public void showPopUp(String popUpMessage) {
-        /*
-        ** builder is helper class for adding features like message, title, button functionalities - what happens when you press on Ok/Cancel
-         */
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
-                .setMessage(popUpMessage);
-            /*
-            ** when you call create method on builder it creates an alert dialog.
-            ** when you call show method on builder, it shows the dialog on the screen.
-             */
-        builder.create().show();
     }
 
     /**
@@ -124,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private boolean isAnswerOneCorrect() {
         String correctAnswer = getString(R.string.answer1);
-        String usersAnswer = textInputQuestionOneET.getText().toString();
+        String usersAnswer = textInputQuestionOneET.getText().toString().trim();
         return usersAnswer.equalsIgnoreCase(correctAnswer);
     }
 
@@ -177,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private boolean isAnswerSixCorrect() {
         String correctAnswer = getString(R.string.answer6);
-        String usersAnswer = textInputQuestionTwoET.getText().toString();
+        String usersAnswer = textInputQuestionTwoET.getText().toString().trim();
         return usersAnswer.equalsIgnoreCase(correctAnswer);
     }
 
@@ -190,8 +163,6 @@ public class MainActivity extends AppCompatActivity {
         //Is the view checked?
         boolean checked = ((RadioButton) view).isChecked();
     }
-
-
 }
 
 

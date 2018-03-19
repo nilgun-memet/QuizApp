@@ -7,320 +7,247 @@
     android:background="@drawable/background">
 
     <LinearLayout
+        style="@style/LinearLayoutMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_small"
-        android:orientation="vertical"
         tools:context="com.example.android.justjava.MainActivity">
 
         <TextView
+            style="@style/TitleStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:gravity="center"
-            android:text="@string/welcome"
-            android:textColor="@color/light_grey"
-            android:textSize="@dimen/title"
-            android:textStyle="bold" />
+            android:text="@string/welcome" />
 
         <LinearLayout
             android:id="@+id/question1"
+            style="@style/LinearLayoutHorizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question1"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/question1" />
 
             <EditText
                 android:id="@+id/nadia"
+                style="@style/EditTextStyle"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:inputType="textCapWords" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/question2"
+            style="@style/LinearLayoutVertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/question2"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/question2" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/checkbox_option1Q2"
+                style="@style/CheckBoxStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/light_grey"
                 android:onClick="onCheckboxClicked"
-                android:paddingLeft="@dimen/padding_left"
-                android:text="@string/transporter"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/transporter" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/checkbox_option2Q2"
+                style="@style/CheckBoxStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/light_grey"
                 android:onClick="onCheckboxClicked"
-                android:paddingLeft="@dimen/padding_left"
-                android:text="@string/invisibleGuest"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/invisibleGuest" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/checkbox_option3Q2"
+                style="@style/CheckBoxStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/light_grey"
                 android:onClick="onCheckboxClicked"
-                android:paddingLeft="@dimen/padding_left"
-                android:text="@string/potter"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/potter" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/checkbox_option4Q2"
+                style="@style/CheckBoxStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/light_grey"
                 android:onClick="onCheckboxClicked"
-                android:paddingLeft="@dimen/padding_left"
-                android:text="@string/whistleblower"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/whistleblower" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/question3"
+            style="@style/LinearLayoutVertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/question3"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/question3" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <android.support.v7.widget.AppCompatRadioButton
+                    style="@style/RadioButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:text="@string/transalpina"
-                    android:textColor="@color/light_grey"
-                    android:textSize="@dimen/body"
-                    app:buttonTint="@color/light_grey" />
+                    android:text="@string/transalpina" />
 
                 <android.support.v7.widget.AppCompatRadioButton
+                    style="@style/RadioButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:text="@string/transiberian"
-                    android:textColor="@color/light_grey"
-                    android:textSize="@dimen/body"
-                    app:buttonTint="@color/light_grey" />
+                    android:text="@string/transiberian" />
 
                 <android.support.v7.widget.AppCompatRadioButton
                     android:id="@+id/answer3_radio_button"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:text="@string/transfagarasean"
-                    android:textColor="@color/light_grey"
-                    android:textSize="@dimen/body"
-                    app:buttonTint="@color/light_grey" />
+                    android:text="@string/transfagarasean" />
 
                 <android.support.v7.widget.AppCompatRadioButton
+                    style="@style/RadioButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:text="@string/route62"
-                    android:textColor="@color/light_grey"
-                    android:textSize="@dimen/body"
-                    app:buttonTint="@color/light_grey" />
+                    android:text="@string/route62" />
             </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/question4"
+            style="@style/LinearLayoutVertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/question4"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/question4" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/checkbox_option1Q4"
+                style="@style/CheckBoxStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/light_grey"
                 android:onClick="onCheckboxClicked"
-                android:paddingLeft="@dimen/padding_left"
-                android:text="@string/insulin"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/insulin" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/checkbox_option2Q4"
+                style="@style/CheckBoxStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/light_grey"
                 android:onClick="onCheckboxClicked"
-                android:paddingLeft="@dimen/padding_left"
-                android:text="@string/sausage"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/sausage" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/checkbox_option3Q4"
+                style="@style/CheckBoxStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/light_grey"
                 android:onClick="onCheckboxClicked"
-                android:paddingLeft="@dimen/padding_left"
-                android:text="@string/pen"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/pen" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/checkbox_option4Q4"
+                style="@style/CheckBoxStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/light_grey"
                 android:onClick="onCheckboxClicked"
-                android:paddingLeft="@dimen/padding_left"
-                android:text="@string/engine"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/engine" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/question5"
+            style="@style/LinearLayoutVertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/question5"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/question5" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <android.support.v7.widget.AppCompatRadioButton
+                    style="@style/RadioButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/light_grey"
                     android:onClick="onRadioButtonClicked"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:text="@string/iasi"
-                    android:textColor="@color/light_grey"
-                    android:textSize="@dimen/body" />
+                    android:text="@string/iasi" />
 
                 <android.support.v7.widget.AppCompatRadioButton
                     android:id="@+id/answer5_radio_button"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/light_grey"
                     android:onClick="onRadioButtonClicked"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:text="@string/timisoara"
-                    android:textColor="@color/light_grey"
-                    android:textSize="@dimen/body" />
+                    android:text="@string/timisoara" />
 
                 <android.support.v7.widget.AppCompatRadioButton
+                    style="@style/RadioButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/light_grey"
                     android:onClick="onRadioButtonClicked"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:text="@string/brasov"
-                    android:textColor="@color/light_grey"
-                    android:textSize="@dimen/body" />
+                    android:text="@string/brasov" />
 
                 <android.support.v7.widget.AppCompatRadioButton
+                    style="@style/RadioButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/light_grey"
                     android:onClick="onRadioButtonClicked"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:text="@string/cluj"
-                    android:textColor="@color/light_grey"
-                    android:textSize="@dimen/body" />
+                    android:text="@string/cluj" />
             </RadioGroup>
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/question6"
+            style="@style/LinearLayoutHorizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question6"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:text="@string/question6" />
 
             <EditText
                 android:id="@+id/name_field"
+                style="@style/EditTextStyle"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/body" />
+                android:inputType="textCapWords" />
         </LinearLayout>
 
         <Button
+            style="@style/GetScoreButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="@dimen/margin_large"
-            android:background="@color/colorAccent"
             android:onClick="getScore"
-            android:padding="@dimen/padding_button"
-            android:text="@string/score"
-            android:textColor="@color/white" />
-
-
+            android:text="@string/score" />
     </LinearLayout>
 </ScrollView>
